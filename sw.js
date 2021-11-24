@@ -11,7 +11,7 @@ self.addEventListener('install', evento=>{
     const cacheEstatico =caches.open(CACHE)
         .then(cache=>{
             return cache.addAll([
-                '/',
+                //'/',
                 'index.html',
                 'css/bootstrap.min.css',
                 'css/londinium-theme.css',
@@ -28,7 +28,7 @@ self.addEventListener('install', evento=>{
  //Separamos los archivos que no se modificarán en un espacio de cache inmutable
  const cacheInmutable =  caches.open(CACHE_INMUTABLE)
  .then(cache=>{
-    return cache.addAll(['https://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0/dexie.min.js',
+    return cache.addAll(['http://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0/dexie.min.js',
     'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext']);
  });
         
