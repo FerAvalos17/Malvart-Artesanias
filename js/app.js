@@ -1,5 +1,6 @@
 //obtenemos la url del servidor
 var url=window.location.href;
+console.log(url);
 //definimos que nuestro sw.js se encuentra en el repositorio
 var ubicacionSw='/Ejemplo-crud/sw.js';
 
