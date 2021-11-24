@@ -11,7 +11,7 @@ self.addEventListener('install', evento=>{
     const cacheEstatico =caches.open(CACHE)
         .then(cache=>{
             return cache.addAll([
-                '/',
+                //'/',
                 'index.html',
                 'css/bootstrap.min.css',
                 'css/londinium-theme.css',
