@@ -11,12 +11,14 @@ self.addEventListener('install', evento=>{
     const cacheEstatico =caches.open(CACHE)
         .then(cache=>{
             return cache.addAll([
-                //'/',
+                '/',
                 'index.html',
                 'css/bootstrap.min.css',
                 'css/londinium-theme.css',
                 'css/styles.css',
                 'css/icons.css',
+                'css/googleapi.css',
+                'js/dexie.min.js',
                 'js/app.js',
                 'offline.html',
                 'js/main.js',
@@ -25,17 +27,11 @@ self.addEventListener('install', evento=>{
 
             ]);
         });
- //Separamos los archivos que no se modificarán en un espacio de cache inmutable
- const cacheInmutable =  caches.open(CACHE_INMUTABLE)
- .then(cache=>{
-    return cache.addAll(['http://cdnjs.cloudflare.com/ajax/libs/dexie/3.2.0/dexie.min.js',
-    'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin,cyrillic-ext']);
- });
-        
+       
  
        
             //Indicamos que la instalación espere hasta que las promesas se cumplan
-        evento.waitUntil(Promise.all([cacheEstatico,cacheInmutable]));
+        evento.waitUntil(Promise.all([cacheEstatico]));
 });
 //Indicamos que durante el proceso de activación se borren los
 //espacios de cache estatico de versiones pasadas
