@@ -1,0 +1,17 @@
+
+html, body {
+    height: 100%;
+    background-color: #00ff66;
+}
+
+h1,h2,h3,h4,h5 {
+    color: rgb(255, 77, 0);
+}
+
+hr {
+    background-color: rgb(217, 0, 255);
+}
+
+p{
+    color: #ff001e;
+}

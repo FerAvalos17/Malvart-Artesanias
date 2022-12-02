@@ -1,3 +1,5 @@
+
+
 const tiendbd=(nombrebd, tabla)=>{
     //creando la base de datos
 
@@ -70,8 +72,8 @@ const ordenarCampos = producto=>{
     objProducto={
         id:producto.id,
         nombre:producto.nombre,
-        costo:producto.precio,
-        descripcion:producto.descripcion
+        correo:producto.correo,
+        mensaje:producto.mensaje
     }
     return objProducto;
 }

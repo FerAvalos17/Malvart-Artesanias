@@ -1,154 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"
-    />
-    <title>Ejemplo CRUD IndexBD</title>
+<head>
+<title>Malvart</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Malvart">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/responsive.css">
+<link rel="stylesheet" href="css/style.css">
+<!-- Esto es otro comentario <link href="css/londinium-theme.css" rel="stylesheet" type="text/css" />-->
+<link href="styles/icons.css" rel="stylesheet" type="text/css" />
+<link href="styles/googleapi.css" rel="stylesheet" type="text/css" />
+<meta name="theme-color" content="#ffcc50" />
+<link rel="manifest" href="manifest.json" />
+</head>
+<body>
+	
+<div class="super_container">
+	
+	<!-- Header -->
+	<header class="header">
+		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
+			<a href="https://www.instagram.com/malvart_g/">
+				<div class="avatar">
+					<img src="images/malvart.jpg" alt="">
+				</div>
+			</a> 
+			<div class="logo"><a href="index.html">&nbsp;&nbsp;Malvart</a></div>
+			
+			<nav class="main_nav">
+				<ul>
+					<li><a href="index.html">inicio</a></li>
+					<li><a href="categories.html">productos</a></li>
+					<li><a href="nosotros2.html">nosotros</a></li>
+					<li><a href="contact.html">contacto</a></li>
+				</ul>
+			</nav>
+			<div class="header_content ml-auto">
+			<div class="burger_container d-flex flex-column align-items-center justify-content-around menu_mm"><div></div><div></div><div></div></div>
+		</div>
+	</header>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/londinium-theme.css" rel="stylesheet" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet" type="text/css" />
-    <link href="css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="css/googleapi.css" rel="stylesheet" type="text/css" />
+	<!-- Menu -->
 
-    <link rel="manifest" href="manifest.json" />
-    <!--Tema para android - define el color para la barra de direcciones-->
-    <meta name="theme-color" content="#3498db" />
-  </head>
+	<div class="menu d-flex flex-column align-items-end justify-content-start text-right menu_mm trans_400">
+		<div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+		<div class="logo menu_mm"><a href="index.html">Malvart</a></div>
+		
+		<nav class="menu_nav">
+			<ul class="menu_mm">
+				<li class="menu_mm"><a href="index.html">inicio</a></li>
+				<li class="menu_mm"><a href="categories.html">productos</a></li>
+				<li class="menu_mm"><a href="nosotros2.html">nosotros</a></li>
+				<li class="menu_mm"><a href="contact.html">contacto</a></li>
+			</ul>
+		</nav>
+	</div>
 
-  <body>
-    <!-- Page content -->
-    <div class="page-content">
-      <!-- Page header -->
-      <div class="page-header">
-        <div class="page-title">
-          <h3>
-            Productos
-            <small>Ejemplo de CRUD con IndexBD</small>
-          </h3>
-        </div>
-      </div>
-      <!-- /page header -->
+	<!-- Home -->
 
-      <!-- Vertical form outside panel -->
-      <form role="form">
-        <div class="block">
-          <h6 class="heading-hr">Registra un Nuevo Producto</h6>
+	<div class="home">
+		
+		<!-- Home Slider -->
 
-          <div class="form-group">
-            <label>Clave:</label>
-            <input type="text" class="form-control" id="clave" readonly />
-          </div>
+		<div class="home_slider_container">
+			<div class="owl-carousel owl-theme home_slider">
+				
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url(images/home_slider_1.jpg)"></div>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<div class="home_slider_subtitle">Pedidos personalizados</div>
+							<div class="home_slider_title">Aretes y demás accesorios...</div>
+						</div>	
+					</div>
+				</div>
+				
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url(images/home_slider_2.jpg)"></div>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<div class="home_slider_subtitle">Aprovecha nuestras promociones</div>
+							<div class="home_slider_title">Cositas chidas a tu alcance</div>
+						</div>	
+					</div>
+				</div>
 
-          <div class="form-group">
-            <label>Nombre:</label>
-            <input type="text" class="form-control" id="nombre" />
-          </div>
+				<!-- Home Slider Item -->
+				<div class="owl-item">
+					<div class="home_slider_background" style="background-image:url(images/home_slider_3.jpg)"></div>
+					<div class="home_slider_content">
+						<div class="home_slider_content_inner">
+							<div class="home_slider_subtitle">Mandanos tu idea!
+							</div>
+							<div class="home_slider_title">Diseños personalizados</div>
+						</div>	
+					</div>
+				</div>
+			</div>
+			
+			<!-- Home Slider Nav -->
 
-          <div class="form-group">
-            <label>Precio:</label>
-            <input type="text" class="form-control" id="costo" />
-          </div>
+			<div class="home_slider_next d-flex flex-column align-items-center justify-content-center"><img src="images/arrow_r.png" alt=""></div>
 
-          <div class="form-group">
-            <label>Descripción:</label>
-            <textarea
-              rows="5"
-              cols="5"
-              class="form-control"
-              id="descripcion"
-            ></textarea>
-          </div>
+			<!-- Home Slider Dots -->
 
-          <div class="form-actions text-right">
-            <input
-              type="button"
-              value="Guardar"
-              class="btn btn-success"
-              id="guardar"
-            />
+			<div class="home_slider_dots_container">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="home_slider_dots">
+								<ul id="home_slider_custom_dots" class="home_slider_custom_dots">
+									<li class="home_slider_custom_dot active">01.<div></div></li>
+									<li class="home_slider_custom_dot">02.<div></div></li>
+									<li class="home_slider_custom_dot">03.<div></div></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</div>
+	
+	<!-- Promo -->
 
-            <input
-              type="button"
-              value="Modificar"
-              class="btn btn-warning"
-              id="modificar"
-            />
-            <input
-              type="button"
-              value="Limpiar BD"
-              class="btn btn-danger"
-              id="eliminar-todo"
-            />
-          </div>
-        </div>
-      </form>
+	<div class="promo">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">artesanías</div>
+						<div class="section_title">novedades</div>
+					</div>
+				</div>
+			</div>
+			<div class="row promo_container">
 
-      <!-- Default table -->
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h6 class="panel-title">
-            <i class="icon-table2"></i> Productos Registrados
-          </h6>
-        </div>
-        <div class="table-responsive">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Costo</th>
-                <th>Descripción</th>
-              </tr>
-            </thead>
-            <tbody id="tbody">
-              <!--<tr>
-                <td>1</td>
-                <td>Chocolate</td>
-                <td>23</td>
-                <td>Sin azucar</td>
+				<!-- Promo Item -->
+				<div class="col-lg-4 promo_col">
+					<div class="promo_item">
+						<div class="promo_image">
+							<img src="images/promo_1.jpeg" alt="">
+							<div class="promo_content promo_content_2">
+								<div class="promo_title">Honguitos</div>
+								<div class="promo_subtitle">Aretes</div>
+							</div>
+						</div>
+						<div class="promo_link"><a href="categories.html">$40</a></div>
+					</div>
+				</div>
 
-                <td>
-                  <a
-                    href="#"
-                    class="btn btn-default btn-icon btn-xs tip"
-                    title="Edit entry"
-                    ><i class="icon-pencil"></i
-                  ></a>
-                </td>
-                <td>
-                  <a
-                    href="#"
-                    class="btn btn-default btn-icon btn-xs tip"
-                    title="Edit entry"
-                    ><i class="icon-minus"></i
-                  ></a>
-                </td>
-              </tr>-->
-            </tbody>
-          </table>
-        </div>
-        <div class="form-group">
-          <center id="siRegistros" />
-        </div>
-      </div>
-      <!-- /default table -->
-      <!-- /vertical form outside panel -->
-    </div>
-    <!-- /page content -->
+				<!-- Promo Item -->
+				<div class="col-lg-4 promo_col">
+					<div class="promo_item">
+						<div class="promo_image">
+							<img src="images/promo_2.jpg" alt="">
+							<div class="promo_content promo_content_2">
+								<div class="promo_title">Arcoiris</div>
+								<div class="promo_subtitle">Aretes</div>
+							</div>
+						</div>
+						<div class="promo_link"><a href="categories.html">$45</a></div>
+					</div>
+				</div>
 
-    <script src="js/main.js" type="module"></script>
-    <!-- API DEXIE -->
-    <script
-      src="js/dexie.min.js"
-      integrity="sha512-ZxOA8l07uAOW9hOwLustU8G5Pa9WGUplctjW6OSPYT9VZiS6PzEX7tJdZvUQLswakTUkACm5/rykzrDhds2TJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="js/app.js"></script>
-  </body>
+				<!-- Promo Item -->
+				<div class="col-lg-4 promo_col">
+					<div class="promo_item">
+						<div class="promo_image">
+							<img src="images/promo_3.jpg" alt="">
+							<div class="promo_content promo_content_2">
+								<div class="promo_title">Alerta</div>
+								<div class="promo_subtitle">Aretes</div>
+							</div>
+						</div>
+						<div class="promo_link"><a href="categories.html">$45</a></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- New Arrivals -->
+
+	<div class="arrivals">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">Revisa nuestros accesorios de </div>
+						<div class="section_title">Temporada</div>
+					</div>
+				</div>
+			</div>
+			<div class="row products_container">
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="product">
+						<div class="product_image">
+							<img src="images/product_1.jpg" alt="">
+						</div>
+						<div class="rating rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="product_content clearfix">
+							<div class="product_info">
+								<div class="product_name"><a href="categories.html">Aretes de abeja</a></div>
+								<div class="product_price">$50.00</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="product">
+						<div class="product_image">
+							<img src="images/product_2.jpg" alt="">
+						</div>
+						<div class="rating rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="product_content clearfix">
+							<div class="product_info">
+								<div class="product_name"><a href="categories.html">Aretes de Mariposa</a></div>
+								<div class="product_price">$50.00</div>
+							</div>
+							
+							
+						</div>
+					</div>
+				</div>
+
+				<!-- Product -->
+				<div class="col-lg-4 product_col">
+					<div class="product">
+						<div class="product_image">
+							<img src="images/product_3.jpeg" alt="">
+						</div>
+						<div class="rating rating_4">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="product_content clearfix">
+							<div class="product_info">
+								<div class="product_name"><a href="categories.html">Aretes de aguacate</a></div>
+								<div class="product_price">$40.00</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- Extra -->
+
+	<div class="extra clearfix">
+		<div class="extra_promo extra_promo_1">
+			<div class="extra_promo_image" style="background-image:url(images/extra_1.jpg)"></div>
+			<div class="extra_1_content d-flex flex-column align-items-center justify-content-center text-center">
+				<div class="extra_1_price">30% Descuento<span></span></div>
+				<div class="extra_1_title">Todo diciembre</div>
+				<div class="extra_1_text">*Aplican restricciones</div>
+				
+			</div>
+		</div>
+		<div class="extra_promo extra_promo_2">
+			<div class="extra_promo_image" style="background-image:url(images/extra_2.jpeg)"></div>
+			<div class="extra_2_content d-flex flex-column align-items-center justify-content-center text-center">
+				
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- Gallery -->
+
+	<div class="gallery">
+		<div class="gallery_image" style="background-image:url(images/gallery.jpg)"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="gallery_title text-center">
+						<ul>
+							<li><a href="#">#arte</a></li>
+							<li><a href="#">#único</a></li>
+							
+						</ul>
+					</div>
+					<div class="gallery_text text-center">¡Échale un vistazo a nuestros diseños personalizados!</div>
+					
+				</div>
+			</div>
+		</div>	
+		<div class="gallery_slider_container">
+			
+			<!-- Gallery Slider -->
+			<div class="owl-carousel owl-theme gallery_slider">
+				
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_1.jpeg">
+						<img src="images/gallery_1.jpeg" alt="">
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_2.jpeg">
+						<img src="images/gallery_2.jpeg" alt="">
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_3.jpeg">
+						<img src="images/gallery_3.jpeg" alt="">
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_4.jpeg">
+						<img src="images/gallery_4.jpeg" alt="">
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_5.jpeg">
+						<img src="images/gallery_5.jpeg" alt="">
+					</a>
+				</div>
+
+				<!-- Gallery Item -->
+				<div class="owl-item gallery_item">
+					<a class="colorbox" href="images/gallery_6.jpeg">
+						<img src="images/gallery_6.jpeg" alt="">
+					</a>
+				</div>
+
+			</div>
+		</div>	
+	</div>
+
+	<!-- Testimonials -->
+
+	<div class="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="section_title_container text-center">
+						<div class="section_subtitle">Nos importa tu opinión</div>
+						<div class="section_title">Algunos de sus comentarios</div>
+					</div>
+				</div>
+			</div>
+			<div class="row test_slider_container">
+				<div class="col">
+
+					<!-- Testimonials Slider -->
+					<div class="owl-carousel owl-theme test_slider text-center">
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“He comprado varias veces con ustedes, los productos y el trato son lo máximo.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/testimonials.jpg" alt=""></div>
+								<div class="test_name">Johana García</div>
+								<div class="test_title">cliente</div>
+							</div>
+						</div>
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“Sus productos son muy originales, ideales para obsequios, 100% recomendado.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/testimonio.jpg" alt=""></div>
+								<div class="test_name">Silvia Villa</div>
+								<div class="test_title">cliente</div>
+							</div>
+						</div>
+
+						<!-- Testimonial Item -->
+						<div class="owl-item">
+							<div class="test_text">“Pedí un artículo personalizado y quedé satisfecho con el resultado, adoro sus productos.”</div>
+							<div class="test_content">
+								<div class="test_image"><img src="images/testimonio_3.jpg" alt=""></div>
+								<div class="test_name">Jony Barajas</div>
+								<div class="test_title">cliente</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Newsletter -->
+
+	<div class="newsletter">
+		<div class="newsletter_content">
+			<div class="newsletter_image" style="background-image:url(images/newsletter.jpeg)"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="section_title_container text-center">
+							<div class="section_subtitle"></div>
+							<div class="section_title">
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row newsletter_container">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="newsletter_form_container">
+							<form action="#">
+								<input type="email" class="newsletter_input" required="required" placeholder="Correo electrónico">
+								<button type="submit" class="newsletter_button">Subscríbete</button>
+							</form>
+						</div>
+						<div class="newsletter_text"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<div class="footer_logo"><a href="index.html">Malvart</a></div>
+					<nav class="footer_nav">
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="categories.html">Productos</a></li>
+							<li><a href="nosotros2.html">Nosotros</a></li>
+							<li><a href="contact.html">Contacto</a></li>
+						</ul>
+					</nav>
+					<div class="footer_social">
+						<ul>
+							
+						
+							<li><a href="https://www.instagram.com/malvart_g/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+						
+							
+						</ul>
+					</div>
+					<div class="copyright"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | 2022<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.instagram.com/malvart_g/" target="_blank">Malvart</a>
+</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+  <!--  MAIN.JS ES EL ARECHIVO DONDE ENCUENTRAN LAS FUNCIONES DE BASE DE DATOS -->
+  <script src="js/main.js" type="module"></script>
+
+  <!-- API DEXIE PARA EL MANEJO DE LA BASE DE DATOS-->
+  <script
+	src="js/dexie.min.js"
+	integrity="sha512-ZxOA8l07uAOW9hOwLustU8G5Pa9WGUplctjW6OSPYT9VZiS6PzEX7tJdZvUQLswakTUkACm5/rykzrDhds2TJQ=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+  ></script>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<script src="plugins/colorbox/jquery.colorbox-min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/app.js"></script>
+</body>
 </html>
