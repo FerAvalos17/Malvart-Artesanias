@@ -120,7 +120,7 @@ self.addEventListener('install',evento=>{
         //si ocurre un error, en nuestro caso no hay conexión
             if(evento.request.headers.get('accept').includes('text/html')){
             //si lo que se pide es un archivo html muestra nuestra página offline que esta en cache
-            return caches.match('/pages/offline.html');
+            return caches.match('pages/offline.html');
             }
     });
             evento.respondWith(respuesta); 
