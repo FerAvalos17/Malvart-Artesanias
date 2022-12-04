@@ -1,8 +1,8 @@
 {
     "short_name":"Malvart",
     "name":"Artesanías Malvart",
-    "start_url":"/",
-    "scope": "." ,
+    "start_url":"https://feravalos17.github.io/Malvart-Artesanias/",
+    "scope": "https://feravalos17.github.io/Malvart-Artesanias/" ,
     "background_color":"#ffcc50",
     "theme_color":"#ffcc50",
     "display":"standalone",
