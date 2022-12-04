@@ -16,4 +16,4 @@ navigator.serviceWorker.register(ubicacionSw);
 /* if ( navigator.serviceWorker ) {
     navigator.serviceWorker.register('/sw.js');
 }
-*/
+*/ //prueba
