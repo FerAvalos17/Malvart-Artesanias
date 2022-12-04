@@ -114,20 +114,7 @@ function cargarTabla(){
                   td.textContent =productos.correo===productos[atributo]?` ${productos[atributo]}`:productos[atributo];
                 })
             }
-            crearEtiqueta("td",tr, (td)=>{
-                crearEtiqueta("i",td, (i)=>{
-                i.className += "icon-pencil";
-                i.setAttribute(`data-id`,productos.id);
-                i.onclick=btnEditar;
-                })
-        })
-        crearEtiqueta("td",tr, (td)=>{
-            crearEtiqueta("i",td, (i)=>{
-            i.className += "icon-minus";
-            i.setAttribute(`data-id`,productos.id);
-            i.onclick=btnEliminar;
-            })
-    })
+          
     })
 }else{
     mesajeSinRegistros.textContent="No existen comentarios registrados";
