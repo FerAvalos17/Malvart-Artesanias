@@ -130,7 +130,7 @@ function cargarTabla(){
     })
     })
 }else{
-    mesajeSinRegistros.textContent="No existen comentrios registrados";
+    mesajeSinRegistros.textContent="No existen comentarios registrados";
 }
 })
 
