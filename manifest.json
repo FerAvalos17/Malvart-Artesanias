@@ -1,7 +1,8 @@
 {
     "short_name":"Malvart",
     "name":"Artesanías Malvart",
-    "start_url":"index.html",
+    "start_url":"/",
+    "scope": "." ,
     "background_color":"#ffcc50",
     "theme_color":"#ffcc50",
     "display":"standalone",
