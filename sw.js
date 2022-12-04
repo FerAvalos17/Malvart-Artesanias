@@ -71,7 +71,11 @@
                                'images/gomitas.jpeg',
                                'pages/offline.html',
                                'images/offline.jpg',
-                               'js/app.js'
+                               'js/app.js',
+                               'js/main.js',
+                               'js/funciones.js',
+                               'js/dexie.min.js',
+                               'manifest.json'
                 
                             ]);
                         });
