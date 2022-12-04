@@ -2,13 +2,12 @@ import tiendabd, {guardar,consultar,crearEtiqueta} from './funciones.js';
 
 //Inndicamos el nombre de la base de datos "Tineda", la tabla "productos"
 //y sus atributos ++id(autoincremental), nombre, correoo y descripción.
-let bd=tiendabd("Malvart", {mensajes:`nombre, correo,mensaje`});
+let bd=tiendabd("Malvart", {mensajes:`nombre,mensaje`});
 
 
 //recuperando inputs del formulario
 
 const nombre_prod = document.getElementById("nombre");
-const costo_prod = document.getElementById("correo");
 const desc_prod = document.getElementById("mensaje");
 const mesajeSinRegistros = document.getElementById("siRegistros");
 
@@ -36,14 +35,12 @@ btGuardar.onclick=(evento)=>{
     //Se enviar los datos del formulario a la función guardar del archivo funciones.js
      let flag =guardar(bd.mensajes, {
      nombre:nombre_prod.value,
-     correo:costo_prod.value,
      mensaje:desc_prod.value
  });
  
  if(flag){
     //Se limpian las cajas de texto
    nombre_prod.value="";
-   costo_prod.value=""
    desc_prod.value="";
 
    cargarTabla();
@@ -60,13 +57,11 @@ btModificar.onclick=(evento)=>{
        //si exiete el id se enviar los datos del formulario a la función guardar del archivo funciones.js
         bd.mensajes.update({
             nombre:nombre_prod.value,
-            correo:costo_prod.value,
             mensaje:desc_prod.value
         }).then((resultado)=>{
             if(resultado){
                console.log("Modificación realizada");
                 nombre_prod.value="";
-                costo_prod.value=""
                 desc_prod.value="";
                 cargarTabla();
                 
@@ -90,7 +85,7 @@ btEliminarTodo.onclick=()=>{
       //se ejecuta el borrado de toda la base de datos y se crea nuevamente pero vacia
     
        bd.delete();
-       bd=tiendabd("Malvart", {mensajes:`nombre, correo,mensaje`});
+       bd=tiendabd("Malvart", {mensajes:`nombre,mensaje`});
        bd.open();
        location.reload();
       
