@@ -12,6 +12,11 @@ ubicacionSw='/sw.js';
 navigator.serviceWorker.register(ubicacionSw);
 } 
 }
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('/sw.js');
+    });
+  }
 
 /* if ( navigator.serviceWorker ) {
     navigator.serviceWorker.register('/sw.js');
