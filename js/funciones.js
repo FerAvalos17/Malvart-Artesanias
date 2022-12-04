@@ -70,7 +70,6 @@ const consultar =(tabla, funcion)=>{
 const ordenarCampos = producto=>{
     let objProducto={};
     objProducto={
-        id:producto.id,
         nombre:producto.nombre,
         correo:producto.correo,
         mensaje:producto.mensaje

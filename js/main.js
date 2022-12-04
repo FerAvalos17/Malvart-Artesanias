@@ -2,11 +2,11 @@ import tiendabd, {guardar,consultar,crearEtiqueta} from './funciones.js';
 
 //Inndicamos el nombre de la base de datos "Tineda", la tabla "productos"
 //y sus atributos ++id(autoincremental), nombre, correoo y descripción.
-let bd=tiendabd("Malvart", {mensajes:`++id,nombre, correo,mensaje`});
+let bd=tiendabd("Malvart", {mensajes:`nombre, correo,mensaje`});
 
 
 //recuperando inputs del formulario
-const clave_prod = document.getElementById("clave");
+
 const nombre_prod = document.getElementById("nombre");
 const costo_prod = document.getElementById("correo");
 const desc_prod = document.getElementById("mensaje");
@@ -20,8 +20,7 @@ const mensajeOk = document.getElementById("mensajeOk");
 
 //accediendo a los botones
 const btGuardar=document.getElementById("guardar");
-const btModificar=document.getElementById("modificar");
-const btEliminarTodo=document.getElementById("eliminar-todo");
+
 
 
 //visualizando datos registrados 
@@ -56,10 +55,10 @@ btGuardar.onclick=(evento)=>{
 //Evento click para guardar cambios
 btModificar.onclick=(evento)=>{
     //Se recupera el id del producto a modificar
-    const id=parseInt(clave_prod.value||0);
-    if(id){
+    //const id=parseInt(clave_prod.value||0);
+    //if(id){
        //si exiete el id se enviar los datos del formulario a la función guardar del archivo funciones.js
-        bd.mensajes.update(id,{
+        bd.mensajes.update({
             nombre:nombre_prod.value,
             correo:costo_prod.value,
             mensaje:desc_prod.value
@@ -82,7 +81,7 @@ btModificar.onclick=(evento)=>{
     }
    
     
-}
+//}
 
 
 //Evento click para  eliminar todo
@@ -91,7 +90,7 @@ btEliminarTodo.onclick=()=>{
       //se ejecuta el borrado de toda la base de datos y se crea nuevamente pero vacia
     
        bd.delete();
-       bd=tiendabd("Malvart", {mensajes:`++id,nombre, correo,mensaje`});
+       bd=tiendabd("Malvart", {mensajes:`nombre, correo,mensaje`});
        bd.open();
        location.reload();
       
@@ -131,32 +130,16 @@ function cargarTabla(){
     })
     })
 }else{
-    mesajeSinRegistros.textContent="No existen mensajes registrados";
+    mesajeSinRegistros.textContent="No existen comentrios registrados";
 }
 })
 
 }
 
-function btnEditar(evento) {
-    let id=parseInt(evento.target.dataset.id);
-   
-    bd.mensajes.get(id, producto=>{
-      clave_prod.value=producto.id||0;
-      nombre_prod.value=producto.nombre||"";
-      costo_prod.value=producto.correo||"";
-      desc_prod.value=producto.mensaje||"";
 
-    })
-}
-
-function btnEliminar(evento) {
-    let id=parseInt(evento.target.dataset.id);
-   console.log(id);
-   bd.mensajes.delete(id);
-   cargarTabla();
 
     
-}
+
 
 
 
